@@ -23,3 +23,20 @@ get '/' do
   @recipes = cookbook.all
   erb :index
 end
+
+get '/new' do
+  erb :new
+end
+
+post '/recipes' do
+  cookbook = Cookbook.new(File.join(__dir__, 'recipes.csv'))
+  recipe = Recipe.new(params[:name], params[:description], params[:difficulty], params[:prep_time])
+  cookbook.add_recipe(recipe)
+  redirect to '/'
+end
+
+get '/recipes/:index' do
+  cookbook = Cookbook.new(File.join(__dir__, 'recipes.csv'))
+  cookbook.remove_recipe(params[:index].to_i)
+  redirect to '/'
+end
