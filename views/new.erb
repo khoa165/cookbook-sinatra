@@ -1,13 +1,43 @@
-<h1>Add a recipe</h1>
+<h1 class="header">Add a recipe</h1>
 
 <form action="/recipes" method="post">
-  <div>
-    <label for="name">Name</label>
-    <input type="text" name="name">
+  <div class="row">
+    <div class="col-6 align-right">
+      <label for="name">Name</label>
+    </div>
+    <div class="col-6 align-left">
+      <input type="text" name="name">
+    </div>
   </div>
-  <div>
-    <label for="name">Description</label>
-    <input type="text" name="description">
+  <div class="row">
+    <div class="col-6 align-right">
+      <label for="description">Description</label>
+    </div>
+    <div class="col-6 align-left">
+      <input type="text" name="description">
+    </div>
   </div>
-  <input type="submit" value="Add to cookbook">
+  <div class="row">
+    <div class="col-6 align-right">
+      <label for="difficulty level">Difficulty level</label>
+    </div>
+    <div class="col-6 align-left">
+      <input type="text" name="difficulty">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 align-right">
+      <label for="prep time">Prep time</label>
+    </div>
+    <div class="col-6 align-left">
+      <input type="text" name="prep_time">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 align-right">
+    </div>
+    <div class="col-6 align-left">
+      <input class="submit" type="submit" value="Add to cookbook">
+    </div>
+  </div>
 </form>

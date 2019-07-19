@@ -28,3 +28,19 @@ body {
   text-align: center;
 }
 
+form #header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+
